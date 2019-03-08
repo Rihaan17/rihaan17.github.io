@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,9 +8,10 @@
 	  <meta name="keywords" content="web design, affordable web design, professional web design">
   	<meta name="author" content="Brad Traversy">
     <title>HS Creations | Welcome</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.css">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/4D200F54-83AF-DB42-881F-33DCE3F7A249/main.js" charset="UTF-8"></script></head>
+  <body id="topcontrol">
     <header>
       <div class="container">
         <div id="branding">
@@ -20,19 +22,106 @@
             <li class="current"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-
-
           </ul>
         </nav>
       </div>
     </header>
 
-    <section id="showcase">
-      <div class="container">
-        <h1>Affordable Professional Web Design</h1>
-        <p>"A trusted web solutions center" </p>
+    <!-- Slideshow container -->
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="images/1.jpg" style="width:100%" height="425">
+          <div class="text">Caption One</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="images/freelancer.jpg" style="width:100%" height="425">
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="images/software.png" style="width:100%" height="425">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="images/freelancer.jpg" style="width:100%" height="425">
+          <div class="text">Caption Four</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="images/software.png" style="width:100%" height="425">
+          <div class="text">Caption Five</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-    </section>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+      </div>
+
+      <script type="text/javascript">
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            clearTimeout(window.$sf);
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1} 
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block"; 
+              dots[slideIndex-1].className += " active";
+            }
+              // for automatic slideshow
+              // recome comments if u want slideshow to work sir
+              /*var slideIndex = 0;
+              showSlides();
+              function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1} 
+                slides[slideIndex-1].style.display = "block"; 
+                window.$sf = setTimeout(showSlides, 3000); // Change image every 3 seconds
+              }*/
+      </script>
 
     <section id="newsletter">
       <div class="container">
@@ -43,19 +132,26 @@
         </form>
       </div>
     </section>
+        <section id="showcase">
+            <div class="container"><br>
+              <img src="images/web_design.png" height="100">
+              <h1>Affordable Professional Web Design</h1>
+              <p>"A trusted web solutions center" </p>
+            </div>
+        </section><hr>
 
     <section id="boxes">
       <div class="container">
         <div class="box">
-          <img src="web_design.png">
+          <i class="fa fa-desktop fa-3x" style="color: #e8491d;"></i>
           <h3>Web Design</h3>
           <p>“A successful website does three things:
-It attracts the right kinds of visitors.
-Guides them to the main services or product you offer.
-Collect Contact details for future ongoing relation.”</p>
+              It attracts the right kinds of visitors.
+              Guides them to the main services or product you offer.
+              Collect Contact details for future ongoing relation.”</p>
         </div>
         <div class="box">
-          <img src="software.png">
+          <i class="fa fa-wrench fa-3x" style="color: #e8491d;"></i>
           <h3>Software Solutions</h3>
           <p>“We are a talented team of software developers that help you stay
             at the pulse of emerging technologies and meet all your custom
@@ -63,18 +159,39 @@ Collect Contact details for future ongoing relation.”</p>
              we are your local digital dream team.”</p>
         </div>
         <div class="box">
-          <img src="logo_brush.png">
+          <i class="fa fa-paint-brush fa-3x" style="color: #e8491d;"></i>
           <h3>Graphic Design</h3>
           <p>Graphic designers create visual concepts, by hand or using computer software,
             to communicate ideas that inspire, inform, or captivate consumers.</p>
         </div>
       </div>
     </section>
-
+        <a href="#topcontrol">
+            <button type="button" class="button2" style="bottom: 3rem; right: 2rem; z-index: 1;opacity: 1; float: right; position: fixed;">
+              <span class="fa fa-caret-up top"></span>
+            </button>
+        </a>
     <footer>
-      <p>Copyright © 2019 HS Creations bd. All Rights Reserved..</p><br>
       Email:hsaha171087@bscse.uiu.ac.bd<br>
-      Call:01784395665
+      Call:01784395665<br><br>
+            <div class="btn-group btn-group-sm">
+                <a href="#"><button type="button" class="btn" style="background-color: #3B5998; border:1px solid black;">
+                  <span class="fa fa-facebook" style="color: white;"></span>
+                </button></a>
+                <a href="#"><button type="button" class="btn" style="background-color: #55ACEE; border:1px solid black;">
+                  <span class="fa fa-twitter" style="color: white;"></span>
+                </button></a>
+                <a href="#"><button type="button" class="btn" style="background-color: #dd4b39; border:1px solid black;">
+                  <span class="fa fa-google" style="color: white;"></span>
+                </button></a>
+                <a href="#"><button type="button" class="btn" style="background-color: #007bb5; border:1px solid black;">
+                  <span class="fa fa-linkedin" style="color: white;"></span>
+                </button></a>
+                <a href="#"><button type="button" class="btn" style="background-color: #bb0000; border:1px solid black;">
+                  <span class="fa fa-youtube" style="color: white;"></span>
+                </button></a>
+            </div><!-- if u want the social media icons to be square , change the border-radius in the stylesheet line 304 to maybe 0 or 10px for rounded corners -->
+      <p>Copyright © 2019 HS Creations bd. All Rights Reserved..</p><br>
     </footer>
   </body>
 </html>
