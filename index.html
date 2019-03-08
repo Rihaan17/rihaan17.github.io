@@ -10,6 +10,7 @@
     <title>HS Creations | Welcome</title>
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/4D200F54-83AF-DB42-881F-33DCE3F7A249/main.js" charset="UTF-8"></script></head>
   <body id="topcontrol">
     <header>
@@ -69,11 +70,11 @@
 
       <!-- The dots/circles -->
       <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span> 
-        <span class="dot" onclick="currentSlide(5)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
       </div>
 
       <script type="text/javascript">
@@ -95,15 +96,15 @@
               var i;
               var slides = document.getElementsByClassName("mySlides");
               var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1} 
+              if (n > slides.length) {slideIndex = 1}
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none"; 
+                  slides[i].style.display = "none";
               }
               for (i = 0; i < dots.length; i++) {
                   dots[i].className = dots[i].className.replace(" active", "");
               }
-              slides[slideIndex-1].style.display = "block"; 
+              slides[slideIndex-1].style.display = "block";
               dots[slideIndex-1].className += " active";
             }
               // for automatic slideshow
@@ -114,11 +115,11 @@
                 var i;
                 var slides = document.getElementsByClassName("mySlides");
                 for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none"; 
+                  slides[i].style.display = "none";
                 }
                 slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1} 
-                slides[slideIndex-1].style.display = "block"; 
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
                 window.$sf = setTimeout(showSlides, 3000); // Change image every 3 seconds
               }*/
       </script>
